@@ -1,0 +1,4 @@
+-r requirements.txt
+# Day8에서 이미 사용한 테스트 도구
+httpx==0.28.1
+pytest==8.3.5

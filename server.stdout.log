@@ -1,0 +1,22 @@
+INFO:     127.0.0.1:54915 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62443 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62443 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62443 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50433 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50433 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60863 - "POST /entries HTTP/1.1" 303 See Other
+INFO:     127.0.0.1:60863 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60863 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58169 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58169 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58169 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54312 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54312 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64282 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64282 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56318 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56318 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55721 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55721 - "GET /style.css HTTP/1.1" 200 OK

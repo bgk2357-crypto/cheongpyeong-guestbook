@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+server.stdout.log
+server.stderr.log
+test-output/tmp*/
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
