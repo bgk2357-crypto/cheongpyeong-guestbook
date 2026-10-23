@@ -31,6 +31,7 @@ python -m venv .venv
 |---|---|
 | `main.py` | HTML 응답, 입력 검증, SQLite 저장·목록 |
 | `index.html`, `style.css` | 한 화면의 HTML 양식과 반응형 CSS |
+| `ocean-sailing.jpg` | 푸른 바다·세일링 요트 배경, 약 248 KiB |
 | `requirements.txt` | 기존 Day8 실행 라이브러리 버전 |
 | `requirements-dev.txt`, `test_app.py` | 기존 Day8 테스트 도구와 검증 코드 |
 | `ANALYSIS.md` | Day별 코드 분석과 방명록 적용 근거 |
@@ -39,6 +40,8 @@ python -m venv .venv
 | `VERIFICATION.md` | 검증 결과 및 미검증 범위 |
 
 DB는 첫 접속 시 `data/guestbook.db`에 자동 생성됩니다. 사용자 테이블은 `entries` 하나입니다. 사용자 글이나 DB 파일을 Git에 올리지 않도록 `.gitignore`에 제외했습니다.
+
+화면은 데스크톱에서 왼쪽 응원글 입력과 오른쪽 글 목록으로 나뉩니다. 화면 너비가 820px 이하이면 위아래로 배치됩니다. 디자인을 배포하려면 `main.py`, `index.html`, `style.css`, `ocean-sailing.jpg`를 GitHub에서 함께 업데이트해야 합니다. 이미지 응답 경로가 추가되어 로컬 서버도 한 번 재시작해야 합니다.
 
 ## 범위
 

@@ -9,7 +9,7 @@ from urllib.parse import parse_qs, urlsplit
 
 from fastapi import FastAPI, Query, Request
 from fastapi.concurrency import run_in_threadpool
-from fastapi.responses import HTMLResponse, RedirectResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse, Response
 
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "data" / "guestbook.db"
@@ -102,7 +102,7 @@ def save_entry(name, message):
 async def response_headers(request: Request, call_next):
     response = await call_next(request)
     response.headers["Content-Security-Policy"] = (
-        "default-src 'none'; style-src 'self'; form-action 'self'; "
+        "default-src 'none'; style-src 'self'; img-src 'self'; form-action 'self'; "
         "base-uri 'none'; frame-ancestors 'none'"
     )
     response.headers["X-Content-Type-Options"] = "nosniff"
@@ -119,6 +119,11 @@ def index(page: int = Query(default=1, ge=1, le=10000)):
 @app.get("/style.css")
 def stylesheet():
     return Response((BASE_DIR / "style.css").read_text(encoding="utf-8"), media_type="text/css")
+
+
+@app.get("/ocean-sailing.jpg", include_in_schema=False)
+def sailing_background():
+    return FileResponse(BASE_DIR / "ocean-sailing.jpg", media_type="image/jpeg")
 
 
 @app.post("/entries", response_class=HTMLResponse)

@@ -19,14 +19,15 @@ PythonAnywhere는 FastAPI 실행 기능이 실험 단계이고 장기 요금도 
 
 필요한 것은 GitHub 계정, Render 계정, 방명록 파일입니다. 새 라이브러리를 추가할 필요는 없습니다. 이 안내는 파일 준비부터 설명하며 실제 가입이나 배포를 대신 수행한 것은 아닙니다.
 
-## 2단계 — 올릴 파일 5개 준비
+## 2단계 — 올릴 파일 6개 준비
 
-내 컴퓨터에서 `C:\AI_04기\day1-day8` 폴더를 엽니다. 아래 **5개 파일만** 사용할 것입니다. 파일 이름과 확장자를 그대로 유지하세요.
+내 컴퓨터에서 `C:\AI_04기\day1-day8` 폴더를 엽니다. 아래 **6개 파일만** 사용할 것입니다. 파일 이름과 확장자를 그대로 유지하세요. 바다·요트 배경 이미지를 추가했으므로 `ocean-sailing.jpg`도 함께 올립니다. 컴퓨터의 다른 파일을 삭제하라는 뜻은 아닙니다.
 
 ```text
 main.py
 index.html
 style.css
+ocean-sailing.jpg
 requirements.txt
 .gitignore
 ```
@@ -43,9 +44,9 @@ requirements.txt
 4. 공개 범위를 선택합니다. `Public`이면 업로드한 코드를 누구나 볼 수 있습니다. `Private`이면 이후 Render 연결에서 해당 저장소 접근을 허용해야 합니다.
 5. `Create repository`를 누릅니다.
 6. 빈 저장소 화면의 `uploading an existing file` 링크를 선택합니다. 파일이 있는 저장소라면 `Add file → Upload files`로 들어갑니다.
-7. 2단계의 5개 파일을 올리고 `Commit changes`를 누릅니다.
+7. 2단계의 6개 파일을 올리고 `Commit changes`를 누릅니다.
 
-완료 확인: 저장소 첫 화면에서 `main.py`, `index.html`, `style.css`, `requirements.txt`, `.gitignore`가 바로 보여야 합니다. 이 쉬운 절차에서는 `day1-day8` 폴더 전체를 올리지 않습니다.
+완료 확인: 저장소 첫 화면에서 `main.py`, `index.html`, `style.css`, `ocean-sailing.jpg`, `requirements.txt`, `.gitignore`가 바로 보여야 합니다. 이 쉬운 절차에서는 `day1-day8` 폴더 전체를 올리지 않습니다.
 
 ## 4단계 — Render에서 저장소 연결
 
@@ -58,7 +59,7 @@ requirements.txt
 
 ## 5단계 — 설정값 입력
 
-아래 값을 그대로 입력합니다. 3단계처럼 파일 5개를 저장소 맨 위에 올린 경우입니다.
+아래 값을 그대로 입력합니다. 3단계처럼 파일 6개를 저장소 맨 위에 올린 경우입니다.
 
 | 화면 항목 | 입력할 값 |
 |---|---|
@@ -115,6 +116,7 @@ https://cheongpyeong-guestbook.onrender.com
 | `requirements.txt`를 못 찾음 | GitHub 맨 위에 파일이 있는지, Root Directory를 비웠는지 |
 | `Could not import module main` | `main.py` 이름과 저장 위치 |
 | 화면은 열리는데 CSS가 안 보임 | `style.css` 업로드 여부 |
+| 바다·요트 배경이 안 보임 | `ocean-sailing.jpg`와 수정한 `main.py` 업로드·재배포 여부 |
 | 접속할 때 한동안 대기 화면이 나옴 | 무료 서비스가 다시 켜지는 중인지 |
 | 수정한 문구가 안 보임 | GitHub 커밋과 Render 새 배포 완료 여부 |
 | 응원글이 사라짐 | Render 무료 서버가 재시작·재배포·유휴 정지했는지 |
@@ -150,12 +152,13 @@ PythonAnywhere 무료 계정은 디스크 512 MiB, 웹앱 1개·worker 1개, 만
 
 ### 2. 필요한 소스만 업로드
 
-Files 화면에서 `/home/YOURUSERNAME/guestbook` 폴더를 만들고 다음 4개 파일을 업로드합니다. `YOURUSERNAME`은 본인의 사용자 이름으로 바꿉니다.
+Files 화면에서 `/home/YOURUSERNAME/guestbook` 폴더를 만들고 다음 5개 파일을 업로드합니다. `YOURUSERNAME`은 본인의 사용자 이름으로 바꿉니다.
 
 ```text
 main.py
 index.html
 style.css
+ocean-sailing.jpg
 requirements.txt
 ```
 
@@ -240,7 +243,7 @@ Render 무료 서비스는 유휴 15분 후 정지할 수 있습니다. SQLite �
 ### 배포 순서
 
 1. GitHub 등에 방명록 소스만 담은 저장소를 준비합니다. GitHub Pages 정적 호스팅을 선택하는 절차가 아닙니다.
-2. `main.py`, `index.html`, `style.css`, `requirements.txt`, `.gitignore`를 올립니다. `.venv`, `data`, 토큰, 테스트용 DB는 제외합니다.
+2. `main.py`, `index.html`, `style.css`, `ocean-sailing.jpg`, `requirements.txt`, `.gitignore`를 올립니다. `.venv`, `data`, 토큰, 테스트용 DB는 제외합니다.
 3. Render에서 **New → Web Service**로 소스 저장소를 연결합니다.
 4. Runtime은 Python, Instance Type은 **Free**, worker는 1개로 유지합니다.
 5. 아래 설정을 입력합니다.
