@@ -9,3 +9,5 @@ data/
 *.db-journal
 *.db-wal
 *.db-shm
+*.pyc
+.env
